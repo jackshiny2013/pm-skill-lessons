@@ -1,0 +1,14 @@
+{
+  "name": "Hello World",
+  "version": "0.0.1",
+  "author": "Jack",
+  "description": "第一个node.js程序",
+  "keywords":["node.js","javascript"],
+  "license":"MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}
