@@ -1,0 +1,2 @@
+#
+Javascript脚本的力量，可以作为chrome插件用
