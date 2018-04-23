@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<body>
+<pre id="jack" class="saying"></pre>
+<div style="display:none" id="w">
+    hello 大家好 我是jack，我想让技术变得有趣，
+    今天教大家用代码介绍自己。
+    首先要先介绍几个东西，html标签，
+    大家可以把它想像成箱子套箱子。
+
+    html 它本身最大的箱子
+    head 它的头部
+    body 它的身体
+    div  这个就是真正的箱子，可以一个套一个
+
+       经常有产品新人问我技术问题。
+    像是前后端的区别？数据库是怎么样的？如何和研发沟通？
+    回答的多了，就想系统化的回答，写一本书，
+    让技术变得通俗易懂、有趣。
+        6年间，从技术小白到工程师再到后台、数据产品经理，
+    2000多个日夜，为代码、需求绞尽脑汁、也在创业路上走过，
+    百感交集。
+    本书以小说故事的形式、场景化讲解技术，让枯燥的技术变得有趣。
+    /div> 这个箱子需要用这个来启动<>
+</div>
+
+<script language="javascript">
+    var index=0;
+    var word;
+    function type(){
+        var typePanel = document.getElementById("jack");
+        typePanel.innerText = word.substring(0,index++);
+        if(index % 3 == 0){
+            typePanel.className = "";
+        }else if(index % 3 == 1){
+            typePanel.className = "saying";
+        }
+    }
+    window.onload=function(){
+        word=document.getElementById("w").innerHTML;
+        setInterval(type, 200);
+    }
+
+</script>
+<style>
+    .saying:after {
+        content: "|";
+        font-family: Arial, sans-serif;
+        font-size: 1.2em;
+        line-height: 0;
+        display: inline-block;
+        vertical-align: baseline;
+        opacity: 1;
+        animation: caret 500ms infinite;
+    }
+</style>
+</body>

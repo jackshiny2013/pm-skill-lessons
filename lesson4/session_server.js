@@ -6,7 +6,7 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var app = express();
 var router = express.Router();
-app.set('view engine', 'html');
+app.set('views engine', 'html');
 app.engine('html', require('ejs-mate'));
 app.listen(5000);
 app.use(router);
